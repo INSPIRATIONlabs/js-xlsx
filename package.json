@@ -1,5 +1,5 @@
 {
-	"name": "xlsx",
+	"name": "@inspirationlabs/js-xlsx",
 	"version": "0.8.0",
 	"author": "sheetjs",
 	"description": "Excel (XLSB/XLSX/XLSM/XLS/XML) and ODS spreadsheet parser and writer",
@@ -22,7 +22,7 @@
 		"xlsjs":"",
 		"uglify-js":""
 	},
-	"repository": { "type":"git", "url":"git://github.com/SheetJS/js-xlsx.git" },
+	"repository": { "type":"git", "url":"https://github.com/INSPIRATIONlabs/js-xlsx.git" },
 	"scripts": {
 		"pretest": "git submodule init && git submodule update",
 		"test": "make test"
