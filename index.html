@@ -119,7 +119,7 @@ function xw_xfer(data, cb) {
 		switch(e.data.t) {
 			case 'ready': break;
 			case 'e': console.error(e.data.d); break;
-			default: xx=ab2str(e.data).replace(/\n/g,"\\n").replace(/\r/g,"\\r"); console.log("done"); cb(JSON.parse(xx)); break;
+			default: xx=ab2str(e.data).replace(/\n/g,"\\n").replace(/\r/g,"\\r"); cb(JSON.parse(xx)); break;
 		}
 	};
 	if(rABS) {
@@ -184,7 +184,7 @@ function to_formulae(workbook) {
 
 var tarea = document.getElementById('b64data');
 function b64it() {
-	if(typeof console !== 'undefined') console.log("onload", new Date());
+	// if(typeof console !== 'undefined') console.log("onload", new Date());
 	var wb = X.read(tarea.value, {type: 'base64',WTF:wtf_mode});
 	process_wb(wb);
 }
@@ -203,7 +203,7 @@ function process_wb(wb) {
 	}
 	if(out.innerText === undefined) out.textContent = output;
 	else out.innerText = output;
-	if(typeof console !== 'undefined') console.log("output", new Date());
+	// if(typeof console !== 'undefined') console.log("output", new Date());
 }
 
 var drop = document.getElementById('drop');
@@ -218,7 +218,7 @@ function handleDrop(e) {
 		var reader = new FileReader();
 		var name = f.name;
 		reader.onload = function(e) {
-			if(typeof console !== 'undefined') console.log("onload", new Date(), rABS, use_worker);
+			// if(typeof console !== 'undefined') console.log("onload", new Date(), rABS, use_worker);
 			var data = e.target.result;
 			if(use_worker) {
 				xw(data, process_wb);
@@ -261,7 +261,7 @@ function handleFile(e) {
 		var reader = new FileReader();
 		var name = f.name;
 		reader.onload = function(e) {
-			if(typeof console !== 'undefined') console.log("onload", new Date(), rABS, use_worker);
+			// if(typeof console !== 'undefined') console.log("onload", new Date(), rABS, use_worker);
 			var data = e.target.result;
 			if(use_worker) {
 				xw(data, process_wb);

@@ -68,4 +68,3 @@ try {
 if(!program.quiet) console.error(target_sheet);
 if(program.formulae) console.log(XLSX.utils.get_formulae(ws).join("\n"));
 else console.log(XLSX.utils.make_csv(ws));
-console.log(ws["C2"]);
